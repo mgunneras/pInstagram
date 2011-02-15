@@ -1,0 +1,3 @@
+API client for Python implemented with help from mislav's notes on the unofficial Instagram API https://github.com/mislav/instagram/wiki/
+
+Depends on restclient: http://pypi.python.org/pypi/restclient/
