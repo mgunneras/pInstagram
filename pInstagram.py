@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 # encoding: utf-8
+"""
+https://github.com/mgunneras/pInstagram
+"""
 
 import json
 import datetime
 
 from restclient import GET, POST
-# pip install -e git+https://github.com/thraxil/restclient.git#egg=restclient
+
+__version__ = '0.1'
 
 COOKIE_DATEFORMAT = "%a, %d-%b-%Y %H:%M:%S GMT"
 BASE_URL = 'http://instagr.am/api/v1'
