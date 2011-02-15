@@ -1,9 +1,9 @@
 Instagram API Client
 ====================
 
-A python client for Instagram's unofficial API. Implemented with help from mislav's wiki notes https://github.com/mislav/instagram/wiki/
+A python client for Instagram's unofficial API. Implemented with help from [mislav's wiki notes](https://github.com/mislav/instagram/wiki/).
 
-Depends on restclient: http://pypi.python.org/pypi/restclient/
+Depends on [restclient](http://pypi.python.org/pypi/restclient/)
 
 Basic Usage
 -----------
