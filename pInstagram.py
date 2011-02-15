@@ -52,10 +52,10 @@ class Instagram(object):
             raise CookieException
 
     def login(self, username, password, device_id='0000'):
-        success, rsp, json_content = self._invoke('/accounts/login/', POST, False, params={'username':username, 'password':password, 'device_id':device_id})
+        success, rsp, content = self._invoke('/accounts/login/', POST, False, params={'username':username, 'password':password, 'device_id':device_id})
         if success:
             self.set_cookie(rsp['set-cookie'])
-        return success, json_content
+        return success, content
 
     @standard_response
     def logout(self):
@@ -114,16 +114,16 @@ class Instagram(object):
                 'Cookie' : self.cookie
             })
 
-        rsp, content = method(url, **rest_defaults)
+        rsp, json_content = method(url, **rest_defaults)
 
         try:
-            json_content = json.loads(content)
+            content = json.loads(json_content)
         except:
-            raise APIError('Instagram API did not return json string: %s' % content)
+            raise APIError('Instagram API did not return json string: %s' % json_content)
 
-        success = json_content['status'] == 'ok'
+        success = content['status'] == 'ok'
 
-        if not success and json_content['message'] == 'login_required':
+        if not success and content['message'] == 'login_required':
             raise CookieException('Login required')
 
-        return success, rsp, json_content
+        return success, rsp, content

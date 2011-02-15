@@ -8,11 +8,11 @@ Depends on [restclient](http://pypi.python.org/pypi/restclient/)
 Basic Usage
 -----------
 
-    from pIntagram import Instagram
+    from pInstagram import Instagram
 
     inst = Instagram()
 
-    success, json_content = inst.login('username', 'password')
+    success, content = inst.login('username', 'password')
     if success:
         mycookie = inst.cookie # save store down cookie string
         print inst.feed_timeline()
@@ -22,7 +22,7 @@ Basic Usage
 If you have a cookie stored
 ---------------------------
 
-    from pIntagram import Instagram
+    from pInstagram import Instagram
 
     inst = Instagram(mycookie)
 
