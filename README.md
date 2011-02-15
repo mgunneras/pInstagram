@@ -14,10 +14,8 @@ Basic Usage
 
     success, content = inst.login('username', 'password')
     if success:
-        mycookie = inst.cookie # save store down cookie string
+        mycookie = inst.cookie #store down cookie string
         print inst.feed_timeline()
-
-
 
 If you have a cookie stored
 ---------------------------
