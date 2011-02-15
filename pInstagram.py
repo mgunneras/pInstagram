@@ -33,7 +33,7 @@ def standard_response(fn):
     return inner
 
 class Instagram(object):
-
+    
     def __init__(self, cookie=None):
         if cookie:
             self.set_cookie(cookie)
